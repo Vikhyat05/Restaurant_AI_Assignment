@@ -175,7 +175,7 @@ By pairing real-time seat intelligence with a revenue-focused conversational lay
 
 
 
-**Fimitations**
+**Limitations**
 - No authentication system for users — reservations are open and not tied to a user account.
 - **Seat-inventory race conditions** – Two users can book the same table in the same second; no transaction-level locking yet.
 - **No notifications** – The system doesn’t send SMS / email confirmations or reminders.
