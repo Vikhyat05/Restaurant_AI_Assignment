@@ -122,8 +122,6 @@ Below are four **illustrative chat transcripts** that cover the core user journe
 
 Make the assistant the default entry point for every dining decision, raising table-fill rates and average ticket size while cutting front-of-house labor.
 
----
-
 ### 1. Value Creation Levers
 
 | Lever | How It Drives Business Impact |
@@ -134,7 +132,6 @@ Make the assistant the default entry point for every dining decision, raising ta
 | **Unified customer profile** | Enables hyper-personalized offers and loyalty programs that boost repeat visits. |
 | **Multilingual, multichannel reach** | Captures wider demographic (English, Hindi, Kannada on WhatsApp, web, voice). |
 
----
 
 ### 2. Success Metrics & ROI
 
@@ -145,7 +142,6 @@ Make the assistant the default entry point for every dining decision, raising ta
 | Off-peak seat occupancy | Monetizes idle capacity |
 | Post-interaction CSAT | Higher retention & referrals |
 
----
 
 ### 3. Roll-Out Playbook
 
@@ -155,14 +151,12 @@ Make the assistant the default entry point for every dining decision, raising ta
 4. **Cross-city replication** – reuse multilingual layer, adapt menus.
 5. **Continuous learning loop** – feed chat logs into fine-tunes for upsell and intent accuracy.
 
----
 
 ### 4. Expansion Horizons
 
 - **Horizontal**: Other restaurant groups via white-label SaaS.
 - **Vertical**: Cinemas, healthcare clinics, theme parks, EV-charging stations—any venue requiring time-slot or seat optimization.
 
----
 
 ### 5. Competitive Moats
 
@@ -170,6 +164,6 @@ Make the assistant the default entry point for every dining decision, raising ta
 2. **Data-driven upsell playbook** tuned on historical spend.
 3. **Rapid multilingual deployment kit** enabling new regions to go live in days.
 
----
+
 
 By pairing real-time seat intelligence with a revenue-focused conversational layer, FoodieSpot can boost top-line growth, trim operating costs, and build a defensible data asset that powers expansion into adjacent booking-driven verticals.
