@@ -8,7 +8,7 @@
 
 **High-Level Prompt Architecture**
 
-1. **Role & Mission (first paragraph)** *Anchors model identity (“Reservation Assistant”) and the three user needs.*
+1. **Role & Mission (first paragraph)**  *Anchors model identity (“Reservation Assistant”) and the three user needs.*
 2. **TOOLS block** *Declares function signatures exactly as exposed by the FastAPI backend.* *Reason: lets the model auto-generate valid JSON when calling tools.*
 3. **WHEN-TO-CALL sections** *Trigger logic written as bullet points → easy for the model to parse.* *Separates search vs. booking vs. management to avoid accidental calls.*
 4. **Step-by-Step Post-Tool Instructions** *After search → iterate over* results*, then format them in Markdown.* *After booking → confirm and surface reservation ID.* *Ensures deterministic, user-friendly output.*
