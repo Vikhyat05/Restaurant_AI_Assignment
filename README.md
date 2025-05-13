@@ -118,6 +118,8 @@ Below are four **illustrative chat transcripts** that cover the core user journe
 ---
 ## Business Strategy Summary – FoodieSpot AI Reservation Assistant
 
+📁 [**Complete Case Document**](https://www.notion.so/Sarvam-Assignment-Generative-AI-Engineer-1f278e10361080f3ac28f2734037070b?pvs=4)
+
 **North-Star Objective**
 
 Make the assistant the default entry point for every dining decision, raising table-fill rates and average ticket size while cutting front-of-house labor.
@@ -167,3 +169,24 @@ Make the assistant the default entry point for every dining decision, raising ta
 
 
 By pairing real-time seat intelligence with a revenue-focused conversational layer, FoodieSpot can boost top-line growth, trim operating costs, and build a defensible data asset that powers expansion into adjacent booking-driven verticals.
+
+
+---
+
+
+
+**limitations**
+- No authentication system for users — reservations are open and not tied to a user account.
+- **Seat-inventory race conditions** – Two users can book the same table in the same second; no transaction-level locking yet.
+- **No notifications** – The system doesn’t send SMS / email confirmations or reminders.
+- LLM may not gracefully handle ambiguous or incomplete user queries without further prompt engineering.
+
+**future enhancements**
+- **Google Maps integration** to show nearby restaurants and distance from user.
+- **Calendar integration** to let users add reservations to Google Calendar and invite others.
+- **Admin dashboard** to view/manage reservations, restaurant details, and customer data.
+- **Multilingual support** via LLM prompting or translation layer.
+- **Responsive mobile UI** or a native app for easier booking on the go.
+- **Notifications** — Send reminders and confirmations via email/SMS.
+
+
