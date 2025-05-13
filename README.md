@@ -1,4 +1,4 @@
-### Prompt Approach and Architecture 
+## Prompt Approach and Architecture 
 
 | **Aspect** | **Design Choice** | **Rationale** |
 |:-:|:-:|:-:|
@@ -15,7 +15,7 @@
 5. **Formatting & Validation Rules** *Normalize dates, times, never invent data, never show JSON to users.* *Reduces front-end sanitization work and prevents privacy leaks.*
 
 
-### Example conversations showing different user journeys
+## Example conversations showing different user journeys
 
 Below are four **illustrative chat transcripts** that cover the core user journeys your prompt is designed to handle. They mirror the screenshots you shared while making the tool-call logic visible (commented in *italics* for clarity). Feel free to copy-paste these into your submission.
 
