@@ -66,8 +66,6 @@ Open `frontend/index.html` in your browser or serve it using a live server (e.g.
 
 ---
 
-Let me know if you'd like to add install instructions (like `pip install -r requirements.txt`) or Docker setup too.
-
 
 ## Prompt Approach and Architecture 
 
