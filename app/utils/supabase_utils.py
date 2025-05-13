@@ -170,14 +170,14 @@ def search_restaurants(
 def create_reservation(
     *,
     restaurant_name: str,
-    date: str,  # "2025-05-12"
-    time: str,  # "7:30" or "18:00"
-    am_pm: str = "",  # "" = 24-h, otherwise "AM"/"PM"
+    date: str,  
+    time: str,  
+    am_pm: str = "",  
     party_size: int,
     name: str,
     phone: str,
     special_requests: Optional[str] = None,
-    section: Optional[str] = None,  # NEW ⬅
+    section: Optional[str] = None, 
 ) -> Dict:
     """
     Insert a reservation only if the requested party_size fits
@@ -191,7 +191,7 @@ def create_reservation(
         3. Restaurant total_capacity
     """
 
-    # ---------- 0️⃣  validate input -----------------------------------------
+    
     try:
         party_size = int(party_size)
     except ValueError:
@@ -199,7 +199,7 @@ def create_reservation(
 
     sec_key = section.lower().strip() if section not in [None, ""] else None
 
-    # ---------- 1️⃣  fetch restaurant meta ----------------------------------
+
     try:
         resp = (
             supabaseSync.table("restaurants")
@@ -215,10 +215,9 @@ def create_reservation(
 
     r = resp.data[0]
     restaurant_id = r["restaurant_id"]
-    total_capacity = r.get("total_capacity")  # may be None
-    sections_raw = r.get("sections") or []  # list[dict] or json str
+    total_capacity = r.get("total_capacity") 
+    sections_raw = r.get("sections") or []  
 
-    # normalise sections → list[dict]
     try:
         sections = (
             sections_raw if isinstance(sections_raw, list) else json.loads(sections_raw)
@@ -226,11 +225,11 @@ def create_reservation(
     except Exception:
         sections = []
 
-    # ---------- 2️⃣  section-level checks -----------------------------------
+    
     def _find_section(name: str):
         return next((s for s in sections if s.get("name", "").lower() == name), None)
 
-    # 2a. If a section is requested, check its capacity first
+
     if sec_key:
         sel = _find_section(sec_key)
         if not sel:
@@ -241,7 +240,7 @@ def create_reservation(
 
         sel_cap = sel.get("capacity")
         if sel_cap is not None and party_size > sel_cap:
-            # 2b. Look for any *other* section that can fit
+            
             alternatives = [
                 s["name"]
                 for s in sections
@@ -257,7 +256,6 @@ def create_reservation(
                         f"Would you like to book in {', '.join(alternatives)} instead?"
                     ),
                 }
-            # 2c. No section can fit
             return {
                 "success": False,
                 "error": (
@@ -266,7 +264,6 @@ def create_reservation(
                 ),
             }
 
-    # 2d. No specific section requested → find any that fits
     if not sec_key and sections:
         fits_any = any(
             s.get("capacity") and party_size <= s["capacity"] for s in sections
@@ -280,7 +277,6 @@ def create_reservation(
                 ),
             }
 
-    # ---------- 3️⃣  venue-level capacity fallback --------------------------
     if total_capacity is not None and party_size > total_capacity:
         return {
             "success": False,
@@ -290,7 +286,6 @@ def create_reservation(
             ),
         }
 
-    # ---------- 4️⃣  build UTC datetime -------------------------------------
     ist = pytz.timezone("Asia/Kolkata")
     try:
         dt_str = f"{date} {time} {am_pm.upper()}".strip()
@@ -301,7 +296,6 @@ def create_reservation(
     dt_ist = ist.localize(dt_naive)
     dt_utc = dt_ist.astimezone(pytz.utc)
 
-    # ---------- 5️⃣  write reservation --------------------------------------
     try:
         insert_resp = (
             supabaseSync.table("reservation")
@@ -313,7 +307,7 @@ def create_reservation(
                     "name": name,
                     "phone": phone,
                     "special_requests": special_requests or "none",
-                    "section": section or "unspecified",  # optional: store it
+                    "section": section or "unspecified",  
                 }
             )
             .execute()
