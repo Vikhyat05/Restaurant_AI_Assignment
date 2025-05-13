@@ -175,13 +175,13 @@ By pairing real-time seat intelligence with a revenue-focused conversational lay
 
 
 
-**limitations**
+**Fimitations**
 - No authentication system for users — reservations are open and not tied to a user account.
 - **Seat-inventory race conditions** – Two users can book the same table in the same second; no transaction-level locking yet.
 - **No notifications** – The system doesn’t send SMS / email confirmations or reminders.
 - LLM may not gracefully handle ambiguous or incomplete user queries without further prompt engineering.
 
-**future enhancements**
+**Future Enhancements**
 - **Google Maps integration** to show nearby restaurants and distance from user.
 - **Calendar integration** to let users add reservations to Google Calendar and invite others.
 - **Admin dashboard** to view/manage reservations, restaurant details, and customer data.
