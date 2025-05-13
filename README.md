@@ -29,14 +29,12 @@ Follow these steps to set up the project locally:
 | `phone` | `text` |
 | `special_requests` | `text` |
 
----
 
 ### Step 2: Groq API Setup
 
 - Sign up at [Groq](https://console.groq.com/login).
 - Generate an **API key**.
 
----
 
 ### Step 3: Create `.env` File
 
@@ -49,8 +47,6 @@ GROQ_KEY=your_groq_api_key
 
 ```
 
----
-
 ### Step 4: Start Backend Server (Go in app folder)
 
 ```bash
@@ -58,7 +54,6 @@ uvicorn main:app --reload --port 8000
 
 ```
 
----
 
 ### Step 5: Open Frontend
 
@@ -83,7 +78,7 @@ Open `frontend/index.html` in your browser or serve it using a live server (e.g.
 4. **Step-by-Step Post-Tool Instructions** *After search → iterate over* results*, then format them in Markdown.* *After booking → confirm and surface reservation ID.* *Ensures deterministic, user-friendly output.*
 5. **Formatting & Validation Rules** *Normalize dates, times, never invent data, never show JSON to users.* *Reduces front-end sanitization work and prevents privacy leaks.*
 
-
+---
 ## Example conversations showing different user journeys
 
 Below are four **illustrative chat transcripts** that cover the core user journeys your prompt is designed to handle. They mirror the screenshots you shared while making the tool-call logic visible (commented in *italics* for clarity). Feel free to copy-paste these into your submission.
