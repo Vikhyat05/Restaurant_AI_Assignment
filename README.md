@@ -21,7 +21,7 @@ Below are four **illustrative chat transcripts** that cover the core user journe
 
 #### Journey A – Search with no exact matches ➜ graceful fallback
 **Goal:** User wants North-Indian food + rooftop seating. No venue satisfies both, so the assistant suggests the closest alternative.
-|               |                                                              |
+
 |:-------------:|:------------------------------------------------------------:|
 | **User**      | “Can you suggest me restaurants that offer North-Indian food **with wifi**?” |
 | **Assistant** | *(calls* search_restaurants *with `cuisines=["north indian"], amenities=[“wifi”])*“I couldn’t find a venue that has both North-Indian cuisine and a rooftop area. One option that fits the cuisine (but not rooftop) is **FoodieSpot Indiranagar**. If you’re flexible on seating, would you like more details or other areas?” |
@@ -29,7 +29,7 @@ Below are four **illustrative chat transcripts** that cover the core user journe
 
 #### Journey B – Search with amenity filter ➜ list of matches
 **Goal:** User wants North-Indian food **and** pet-friendly venues.
-|  |  |
+
 |:-:|:-:|
 | **User** | “Can you suggest a good restaurant that offers North Indian food **and is pet-friendly**?” |
 | **Assistant** | *(calls* search_restaurants *with `cuisines=["north indian"], amenities=["pet friendly"])*“Here are some great options:• **FoodieSpot Indiranagar** – North Indian & Chinese Fusion – rooftop, pet-friendly, vegan options – rating 3.8/5.• **FoodieSpot Brookefield** – North Indian & Mughlai – pet-friendly, cocktail bar – rating 4.6/5.Would you like to know more or book a table?” |
@@ -37,7 +37,7 @@ Below are four **illustrative chat transcripts** that cover the core user journe
 
 #### Journey C – Search ➜ pick venue ➜ collect missing fields ➜ book
 **Goal:** User asks for North-Indian places, chooses one, and books for 25 May.
-|  |  |
+
 |:-:|:-:|
 | **User** | “Suggest some good restaurants that offer North-Indian food.” |
 | **Assistant** | *(*search_restaurants → returns 4 venues*)*“Here are some options … (1) FoodieSpot Indiranagar … (2) FoodieSpot Koramangala … Which one appeals to you?” |
@@ -48,7 +48,7 @@ Below are four **illustrative chat transcripts** that cover the core user journe
 
 #### Journey D – Modify an existing reservation
 **Goal:** User has an ID and wants to move the time from 6 PM to 4 PM on the same day.
-|  |  |
+
 |:-:|:-:|
 | **User** | “Hey, I’d like to modify my reservation—can you do it for me?” |
 | **Assistant** | “Sure! Could you share your reservation ID and tell me what you’d like to change (date, time, party size, etc.)?” |
