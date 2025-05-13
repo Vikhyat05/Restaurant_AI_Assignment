@@ -120,7 +120,7 @@ Below are four **illustrative chat transcripts** that cover the core user journe
 | **User**      | “My ID is **e2db0484-1c1e-48c4-81a6-ec7d822aa18a**. Change the time from **6 PM to 4 PM**.” |
 | **Assistant** | *(calls* manage_reservation *with* action="update", reservation_id=…, time="4:00", am_pm="PM"*)*“Done! Your table is now at **4:00 PM** on **25 May** for **5 people** at **FoodieSpot Indiranagar**. The reservation ID remains the same. Anything else I can help with?” |
 
-
+---
 ## Business Strategy Summary – FoodieSpot AI Reservation Assistant
 
 **North-Star Objective**
