@@ -1,3 +1,74 @@
+## Setup Instructions
+
+Follow these steps to set up the project locally:
+
+---
+
+### Step 1: Supabase Setup
+
+1. Create a [Supabase](https://supabase.com/) project.
+2. Create the following **tables**:
+
+### `restaurants`
+
+- Upload the provided CSV file
+    
+    📁 [**Download CSV**](https://docs.google.com/spreadsheets/d/1TnwtKM0kdpCcg-vMyiajkBSjqlop8n571Lgsptj5Lgw/edit?usp=sharing)
+    
+
+### `reservation`
+
+| Column Name | Type |
+| --- | --- |
+| `id` | `uuid` |
+| `created_at` | `timestamp with time zone` |
+| `restaurant_id` | `text` |
+| `datetime` | `timestamp with time zone` |
+| `party_size` | `smallint` |
+| `name` | `text` |
+| `phone` | `text` |
+| `special_requests` | `text` |
+
+---
+
+### Step 2: Groq API Setup
+
+- Sign up at [Groq](https://console.groq.com/login).
+- Generate an **API key**.
+
+---
+
+### Step 3: Create `.env` File
+
+In the root of your project, create a `.env` file with the following variables:
+
+```
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_key
+SUPABASE_URL=your_supabase_project_url
+GROQ_KEY=your_groq_api_key
+
+```
+
+---
+
+### Step 4: Start Backend Server (Go in app folder)
+
+```bash
+uvicorn main:app --reload --port 8000
+
+```
+
+---
+
+### Step 5: Open Frontend
+
+Open `frontend/index.html` in your browser or serve it using a live server (e.g., VS Code Live Server Extension).
+
+---
+
+Let me know if you'd like to add install instructions (like `pip install -r requirements.txt`) or Docker setup too.
+
+
 ## Prompt Approach and Architecture 
 
 | **Aspect** | **Design Choice** | **Rationale** |
